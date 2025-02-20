@@ -8,13 +8,13 @@ html, body {
 
 body {
     background-image: url("https://img.freepik.com/free-vector/pink-glitter-light-spray-effect-dust-sparkle_107791-29885.jpg?semt=ais_hybrid");
-    background-size: cover; /* Make the background cover the entire page */
+    background-size: cover; 
     background-repeat: no-repeat;
-    background-position: center center; /* Center the background */
-    background-attachment: fixed; /* Keep the background fixed when scrolling */
+    background-position: center center; 
+    background-attachment: fixed;
 }
 
-/* Grid Setup */
+
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 150px);
@@ -26,7 +26,7 @@ body {
     margin: 0 auto;
 }
 
-/* Flip Card Style */
+
 .flip-card {
     width: 140px;
     height: 120px;
@@ -69,7 +69,6 @@ body {
     height: 135px;
 }
 
-/* Button Styles */
 button {
     position: relative;
     margin-left: 2rem;
@@ -106,7 +105,6 @@ button:hover::after {
     background: linear-gradient(45deg, purple, rgb(0, 0, 123), #FF5733, maroon);
 }
 
-/* Game Info Box */
 .game-info {
     display: flex;
     border: 2px solid purple;
@@ -125,9 +123,6 @@ button:hover::after {
     margin-left: 3rem;
 }
 
-/* Responsive Styles */
-
-/* For screens 1200px and above */
 @media only screen and (max-width: 1200px) {
     .grid {
         grid-template-columns: repeat(4, 150px);
@@ -147,7 +142,6 @@ button:hover::after {
     }
 }
 
-/* For screens 992px to 1200px */
 @media only screen and (max-width: 992px) {
     .grid {
         grid-template-columns: repeat(3, 150px);
@@ -167,7 +161,6 @@ button:hover::after {
     }
 }
 
-/* For screens 768px to 992px */
 @media only screen and (max-width: 768px) {
     .grid {
         grid-template-columns: repeat(2, 150px);
@@ -187,7 +180,6 @@ button:hover::after {
     }
 }
 
-/* For screens 480px to 768px */
 @media only screen and (max-width: 480px) {
     .grid {
         grid-template-columns: repeat(2, 120px);

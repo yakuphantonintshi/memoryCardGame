@@ -13,9 +13,9 @@ body {
     height: 100vh;
     background-image: url("https://cdna.artstation.com/p/assets/images/images/016/877/720/original/jarek-bartyna-cage1b.gif?1553801430");
     background-repeat: no-repeat;
-    background-size: cover; /* Ensures the image always covers the full screen */
-    background-position: center; /* Centers the image */
-    background-attachment: fixed; /* Optional: Makes the background fixed while scrolling */
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed;
 }
 
 .home {
@@ -84,9 +84,6 @@ h1 {
     }
 }
 
-/* Full page responsiveness for all screen sizes */
-
-/* For larger screens */
 @media only screen and (max-width: 980px) {
     .home {
         padding-top: 10rem;
@@ -103,7 +100,6 @@ h1 {
     }
 }
 
-/* For medium screens (tablets) */
 @media only screen and (max-width: 768px) {
     .home {
         padding-top: 8rem;
@@ -120,7 +116,6 @@ h1 {
     }
 }
 
-/* For smaller screens (phones in portrait) */
 @media only screen and (max-width: 480px) {
     .home {
         padding-top: 5rem;
@@ -137,7 +132,6 @@ h1 {
     }
 }
 
-/* For very small screens (extra small devices) */
 @media only screen and (max-width: 300px) {
     .home {
         padding-top: 4rem;
