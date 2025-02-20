@@ -1,59 +1,69 @@
 @import url('https://fonts.cdnfonts.com/css/the-lego-movie');
 
-body{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: rgb(139, 138, 138); */
-    background-image: url("https://cdna.artstation.com/p/assets/images/images/016/877/720/original/jarek-bartyna-cage1b.gif?1553801430");
-    /* background-position: center; */
-    background-repeat: no-repeat;
-    background-size: cover;
+}
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/016/877/720/original/jarek-bartyna-cage1b.gif?1553801430");
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image always covers the full screen */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Optional: Makes the background fixed while scrolling */
 }
-.home{
-    margin-inline: 25rem;
-    margin-top: 15rem;
+
+.home {
+    text-align: center;
+    width: 100%;
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-button{
+
+button {
     position: relative;
-    margin-top: 5rem;
-    margin-inline-start: 15rem;
+    margin-top: 3rem;
     width: 14rem;
     height: 3.5rem;
     border: 3px solid white;
     color: white;
     cursor: pointer;
     background-color: transparent;
-    cursor: pointer;
     overflow: hidden;
     transition: color 0.4s ease;
     font-weight: 900;
     font-size: 1rem;
 }
 
-        button::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transition: all 0.4s ease;
-            z-index: -1;
-        }
+button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
 
-        button:hover::after {
-            background: linear-gradient(45deg, purple, rgb(0, 0, 123), #FF5733, maroon); 
-        }
-    
-h1{
+button:hover::after {
+    background: linear-gradient(45deg, purple, rgb(0, 0, 123), #FF5733, maroon);
+}
+
+h1 {
     color: white;
     font-family: 'THE LEGO MOVIE', sans-serif;
     font-size: 4rem;
-    margin-inline-start: 2rem;
     animation: shadowCycle 3s infinite;
-    /* text-shadow: 10px 10px 10px blue, 10px 10px 10px purple, 10px 10px 10px red; */
+    margin-bottom: 2rem;
 }
 
 @keyframes shadowCycle {
@@ -71,5 +81,75 @@ h1{
     }
     100% {
         text-shadow: 3px 3px 5px red, -3px -3px 5px blue, 2px -2px 5px green, -2px 2px 5px yellow, 0px 0px 10px purple;
+    }
+}
+
+/* Full page responsiveness for all screen sizes */
+
+/* For larger screens */
+@media only screen and (max-width: 980px) {
+    .home {
+        padding-top: 10rem;
+        padding-bottom: 5rem;
+    }
+
+    button {
+        width: 12rem;
+        height: 3rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* For medium screens (tablets) */
+@media only screen and (max-width: 768px) {
+    .home {
+        padding-top: 8rem;
+        padding-bottom: 5rem;
+    }
+
+    button {
+        width: 10rem;
+        height: 2.8rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+/* For smaller screens (phones in portrait) */
+@media only screen and (max-width: 480px) {
+    .home {
+        padding-top: 5rem;
+        padding-bottom: 4rem;
+    }
+
+    button {
+        width: 8rem;
+        height: 2.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* For very small screens (extra small devices) */
+@media only screen and (max-width: 300px) {
+    .home {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+
+    button {
+        width: 6rem;
+        height: 2rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
     }
 }

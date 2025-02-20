@@ -1,5 +1,20 @@
-
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("https://img.freepik.com/free-vector/pink-glitter-light-spray-effect-dust-sparkle_107791-29885.jpg?semt=ais_hybrid");
+    background-size: cover; /* Make the background cover the entire page */
+    background-repeat: no-repeat;
+    background-position: center center; /* Center the background */
+    background-attachment: fixed; /* Keep the background fixed when scrolling */
+}
+
+/* Grid Setup */
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 150px);
@@ -7,13 +22,11 @@
     gap: 15px;
     justify-content: center;
     align-items: center;
-    /* margin-top: 20px; */
     width: 45%;
-    /* height: 100%; */
     margin: 0 auto;
 }
 
-/* Style for each flip card */
+/* Flip Card Style */
 .flip-card {
     width: 140px;
     height: 120px;
@@ -32,7 +45,6 @@
     transform: rotateY(180deg);
 }
 
-
 .flip-card-front,
 .flip-card-back {
     position: absolute;
@@ -42,13 +54,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* font-size: 20px; */
 }
 
 .flip-card-front {
- 
-    /* background-image: url("https://t4.ftcdn.net/jpg/07/15/48/15/360_F_715481519_MwIF2V76Yu34181qcmA7BuRUJhIj52rL.jpg");
-    background-size: cover; */
     background-color: rgb(206, 197, 197);
     border: 2px solid purple;
 }
@@ -61,22 +69,11 @@
     height: 135px;
 }
 
-body {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    height: 100vh;
-    margin: 0;
-    background-image: url("https://img.freepik.com/free-vector/pink-glitter-light-spray-effect-dust-sparkle_107791-29885.jpg?semt=ais_hybrid");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-button{
+/* Button Styles */
+button {
     position: relative;
     margin-left: 2rem;
-    margin-top: 1.7rem ;
+    margin-top: 1.7rem;
     width: 170px;
     height: 40px;
     font-size: 1.3rem;
@@ -86,38 +83,147 @@ button{
     overflow: hidden;
     transition: color 0.4s ease;
     color: white;
-    border: 1px solid white;
+    border: 1.5px solid purple;
 }
-i{
+
+i {
     margin-right: .7rem;
     font-size: 1.4rem;
 }
 
-
 button::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transition: all 0.4s ease;
-            z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease;
+    z-index: -1;
 }
 
 button:hover::after {
-            background: linear-gradient(45deg, purple, rgb(0, 0, 123), #FF5733, maroon); 
+    background: linear-gradient(45deg, purple, rgb(0, 0, 123), #FF5733, maroon);
 }
 
-.game-info{
-    margin: 0 auto;
+/* Game Info Box */
+.game-info {
+    display: flex;
     border: 2px solid purple;
     background-color: rgb(43, 41, 41);
-    width: 15%;
-    font-size: 1.5rem;
+    width: 25%;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 2px purple;
     color: white;
-    margin-inline-start: 40rem;
+    margin-inline-start: 35rem;
     margin-block-start: 1rem;
     padding: 5px;
     margin-bottom: 3rem;
+}
+
+#timer {
+    margin-left: 3rem;
+}
+
+/* Responsive Styles */
+
+/* For screens 1200px and above */
+@media only screen and (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(4, 150px);
+        width: 50%;
+    }
+
+    .game-info {
+        width: 30%;
+        font-size: 1.6rem;
+        margin-inline-start: 30rem;
+    }
+
+    button {
+        width: 160px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+/* For screens 992px to 1200px */
+@media only screen and (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(3, 150px);
+        width: 60%;
+    }
+
+    .game-info {
+        width: 35%;
+        font-size: 1.5rem;
+        margin-inline-start: 20rem;
+    }
+
+    button {
+        width: 150px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
+
+/* For screens 768px to 992px */
+@media only screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 150px);
+        width: 70%;
+    }
+
+    .game-info {
+        width: 50%;
+        font-size: 1.3rem;
+        margin-inline-start: 12rem;
+    }
+
+    button {
+        width: 140px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+/* For screens 480px to 768px */
+@media only screen and (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(2, 120px);
+        width: 80%;
+    }
+
+    .game-info {
+        width: 60%;
+        font-size: 1.2rem;
+        margin-inline-start: 8rem;
+    }
+
+    button {
+        width: 130px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+}
+
+/* For screens less than 480px */
+@media only screen and (max-width: 300px) {
+    .grid {
+        grid-template-columns: repeat(2, 90px);
+        width: 90%;
+    }
+
+    .game-info {
+        width: 10%;
+        font-size: 1.1rem;
+        /* margin-inline-start: 5rem; */
+        margin-right: 100px;
+    }
+
+    button {
+        width: 120px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
 }
